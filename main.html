@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <title>Mini Scrabble Tool</title>
+    <style>
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <h1>Mini Scrabble Tool</h1>
+    <input type="text" id="evaluatedText" placeholder="Enter your word">
+    <h3 id="letterCount">0</h3>
 
+    <script>
+        const evaluatedText = document.getElementById('evaluatedText');
+        const letterCount = document.getElementById('letterCount');
+
+        evaluatedText.addEventListener('input', () => {
+            const text = evaluatedText.value;
+            const count = text.length;
+            letterCount.textContent = count;
+        });
+    </script>
 </body>
-
 </html>
